@@ -1,0 +1,25 @@
+<template name="addressList">
+  <table class="table table-bordered table-condensed table-striped table-hover">
+    <thead>
+      <tr class="info">
+        <th>이름</th>
+        <th>전화번호</th>
+        <th>이메일</th>
+        <th>회사</th>
+        <th>생일</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--표 본문 -->
+      {{#each list}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{phone}}</td>
+          <td>{{email}}</td>
+          <td>{{company}}</td>
+          <td>{{birthday}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>
