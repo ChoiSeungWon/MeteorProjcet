@@ -1,3 +1,20 @@
+<template name="addressInput">
+  <div class="well">
+    <div class="form-inline">
+      <div class="form-group">
+        <input type="text" class="from-control" name="name" placeholder="이름" />
+        <input type="text" class="from-control" name="phone" placeholder="전화번호" />
+        <input type="text" class="from-control" name="email" placeholder="이메일" />
+        <input type="text" class="from-control" name="company" placeholder="회사" />
+        <input type="text" class="from-control" name="birthday" placeholder="생일" />
+        <button class="btn btn-info btn-sm" name="saveAddress">
+          <i class="glyphicon glyphicon-ok"></i>등록
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
+
 <template name="addressList">
   <table class="table table-bordered table-condensed table-striped table-hover">
     <thead>
@@ -7,6 +24,7 @@
         <th>이메일</th>
         <th>회사</th>
         <th>생일</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -18,6 +36,10 @@
           <td>{{email}}</td>
           <td>{{company}}</td>
           <td>{{birthday}}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" name="remove">
+            <i class="glyphicon glyphicon-trash">삭제</i></button>
+          </td>
         </tr>
       {{/each}}
     </tbody>
